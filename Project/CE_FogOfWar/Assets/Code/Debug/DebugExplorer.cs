@@ -1,4 +1,5 @@
 ﻿using Code.FogOfWar.Core;
+using UnityEditor;
 using UnityEngine;
 
 public class DebugExplorer : MonoBehaviour
@@ -14,7 +15,7 @@ public class DebugExplorer : MonoBehaviour
         mTrans = transform;
         mExplorer = new CEFowExplorer();
 
-        int r = Mathf.FloorToInt(viewRange / CEFowFacade.instance.worldMapWidth * CEFowFacade.instance.fowMapWidth);
+        var r = Mathf.FloorToInt(viewRange / CEFowFacade.instance.worldMapWidth * CEFowFacade.instance.fowMapWidth);
 
         mExplorer.Initialize(r, mTrans.position);
     }
@@ -27,7 +28,6 @@ public class DebugExplorer : MonoBehaviour
 
     void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, viewRange);
+        Handles.DrawWireArc(transform.position, Vector3.up, Vector3.forward, 360, viewRange);
     }
 }

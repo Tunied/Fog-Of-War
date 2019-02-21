@@ -93,6 +93,9 @@ namespace Code.FogOfWar.Core
 
         private void RecalculateStaticViewMapData()
         {
+            var mapSize = CEFowFacade.instance.fowMapWidth * CEFowFacade.instance.fowMapHeight;
+            mCacheStaticViewMapData = new bool[mapSize];
+            CEFowFacade.instance.staticExplorerList.ForEach(explorer => { explorer.FillMapData(mCacheStaticViewMapData); });
         }
 
         private void RepaintTexture()
