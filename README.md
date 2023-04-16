@@ -1,6 +1,12 @@
 # Unity Fog Of War
 
-[中文传送门](http://oldking.wang/2ed40ca0-3616-11e9-a000-1f6ee05e8fdd/)
+**URP Fog of War** => https://github.com/Tunied/CE-FOW-URP
+
+- BuildIn 已经不在维护. 就旧项目一直在用. 这种方案比较麻烦的地方是所有Shader都要重写.
+- 另外 如果能升级到 URP 建议直接用URP **Build-In is already history**
+
+
+[中文传送门 - 已失效](http://oldking.wang/2ed40ca0-3616-11e9-a000-1f6ee05e8fdd/)
 
 inspire by [AsehesL](https://github.com/AsehesL/FogOfWar) and [smilehao](https://github.com/smilehao/fog-of-war) and [Ultimate Fog of War](https://assetstore.unity.com/packages/tools/utilities/ultimate-fog-of-war-76011)
 
